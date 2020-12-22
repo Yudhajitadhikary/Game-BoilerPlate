@@ -13,13 +13,13 @@ function App() {
   return (
     <Router>
     <Switch>
-          <Route exact path="/">
-            <Home />
+          <Route exact path="/" component={(props) => <Home {...props}/>}>
+            
           </Route>
-          <Route path="/game">
-            <Game />
+          <Route path="/game" component={(props) => <Game {...props}/>}>
+           
           </Route>
-          <Route path="/history">
+          <Route path="/history" component={(props) => <History {...props}/>}>
             <History />
           </Route>
         </Switch>
